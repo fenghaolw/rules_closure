@@ -696,13 +696,11 @@ def com_google_javascript_closure_library():
     # After updating: bazel run //closure/library:regenerate -- "$PWD"
     http_archive(
         name = "com_google_javascript_closure_library",
+        sha256 = "082db0b92ad4eceddda77013e3af4e524aa2fdcf37c832c82172c1646005674e",
         urls = [
-            "https://mirror.bazel.build/github.com/google/closure-library/archive/v20191027.tar.gz",
-            "https://github.com/google/closure-library/archive/v20191027.tar.gz",
+            "https://github.com/fenghaolw/closure-library/archive/refs/tags/v20210830.tar.gz",
         ],
-        sha256 = "d21fdefb72d88a1aa629279c53a95fdd4d5632d0e5b13e6b591b177d25bde337",
-        strip_prefix = "closure-library-20191027",
-        build_file = str(Label("//closure/library:closure_library.BUILD")),
+        strip_prefix = "closure-library-20210830",
     )
 
 def com_google_jsinterop_annotations():
